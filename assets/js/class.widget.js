@@ -153,11 +153,9 @@ class CWidgetOpenAI extends CWidget {
         const response = await request.json();
 
         if (response.choices.length > 0) {
-            answerElement.innerHTML = response.choices[0].message.content;
+            answerElement.innerHTML = marked.parse(response.choices[0].message.content);
             this.chatLog.scrollTop = this.chatLog.scrollHeight;
         }
-
-        console.log(response);
     }
 
     createMessage(sender) {
