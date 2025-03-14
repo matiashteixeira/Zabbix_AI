@@ -40,7 +40,7 @@ use Zabbix\Widgets\Fields\CWidgetFieldTextBox;
             new CWidgetFieldTextBoxView($data['fields']['endpoint'])
         )
         ->addField(
-            new CWidgetFieldSelectView($data['fields']['model'])
+            new CWidgetFieldTextBoxView($data['fields']['model'])
         )
         ->addField(
             (new CWidgetFieldTextBoxView($data['fields']['temperature']))
