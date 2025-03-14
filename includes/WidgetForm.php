@@ -36,7 +36,7 @@ class WidgetForm extends CWidgetForm
             ->addField(
                 (new CWidgetFieldSelect('service', _('Service'), [
                         0 => 'OpenAI',
-                        1 => 'Custom',
+                        1 => 'DeepSeek',
                     ]))
                     ->setDefault(0)
                     ->setFlags(CWidgetField::FLAG_LABEL_ASTERISK)

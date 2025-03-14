@@ -48,7 +48,7 @@ window.widget_openai_form = new class {
                 endpoint.value = 'https://api.openai.com/v1/chat/completions';
                 break;
             case '1':
-                endpoint.value = 'https://gpt.initmax.cz/v1/chat/completions';
+                endpoint.value = 'https://api.deepseek.com/chat/completions';
                 break;
             default:
                 endpoint.value = '';
