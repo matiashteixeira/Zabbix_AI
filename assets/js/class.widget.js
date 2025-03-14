@@ -67,14 +67,14 @@ class CWidgetOpenAI extends CWidget {
             },
             signal: this.stopController.signal,
             body: JSON.stringify({
-                model: this.model,
+                model: 'gpt-3.5-turbo',
                 messages: [
                     {
                         role: 'user',
                         content: question,
                     },
                 ],
-                stream: false,
+                stream: this.stream,
             })
         });
 
