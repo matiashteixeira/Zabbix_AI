@@ -51,18 +51,13 @@ class WidgetForm extends CWidgetForm
                     ->setFlags(CWidgetField::FLAG_NOT_EMPTY | CWidgetField::FLAG_LABEL_ASTERISK)
             )
             ->addField(
-                (new CWidgetFieldTextBox('model', _('Model')))
-                    ->setDefault('gpt-3.5-turbo')
-                    ->setFlags(CWidgetField::FLAG_NOT_EMPTY | CWidgetField::FLAG_LABEL_ASTERISK)
-            )
-            /*->addField(
                 (new CWidgetFieldSelect('model', _('Model'), [
                         0 => 'GPT-3.5 Turbo',
                         1 => 'Ainda precisa ser criado',
                     ]))
                     ->setDefault(0)
                     ->setFlags(CWidgetField::FLAG_DISABLED)
-            )*/
+            )
             ->addField(
                 (new CWidgetFieldTextBox('temperature', _('Temperature')))
                     ->setDefault('1')
