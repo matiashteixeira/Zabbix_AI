@@ -78,6 +78,8 @@ class CWidgetOpenAI extends CWidget {
             })
         });
 
+        console.log(request);
+
         if (this.stream) {
             await this.streamResponse(request, answerElement);
         }
@@ -154,6 +156,8 @@ class CWidgetOpenAI extends CWidget {
             answerElement.innerHTML = response.choices[0].message.content;
             this.chatLog.scrollTop = this.chatLog.scrollHeight;
         }
+
+        console.log(response);
     }
 
     createMessage(sender) {
