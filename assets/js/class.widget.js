@@ -20,6 +20,7 @@
 class CWidgetOpenAI extends CWidget {
     apiToken = this._fields.token;
     apiEndpoint = this._fields.endpoint;
+    model = this._fields.model;
     stream = true;
     abort = false;
 
@@ -66,14 +67,14 @@ class CWidgetOpenAI extends CWidget {
             },
             signal: this.stopController.signal,
             body: JSON.stringify({
-                model: 'gpt-3.5-turbo',
+                model: this.model,
                 messages: [
                     {
                         role: 'user',
                         content: question,
                     },
                 ],
-                stream: this.stream,
+                stream: false,
             })
         });
 
