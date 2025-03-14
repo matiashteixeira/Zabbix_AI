@@ -77,6 +77,8 @@ class CWidgetOpenAI extends CWidget {
             })
         });
 
+        console.log('Enviando mensagem:', question);
+
         if (this.stream) {
             await this.streamResponse(request, answerElement);
         }
@@ -149,6 +151,8 @@ class CWidgetOpenAI extends CWidget {
     async response(request, answerElement) {
         const response = await request.json();
 
+        console.log(response);
+        
         if (response.choices.length > 0) {
             answerElement.innerHTML = response.choices[0].message.content;
             this.chatLog.scrollTop = this.chatLog.scrollHeight;
